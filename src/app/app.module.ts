@@ -1,4 +1,3 @@
-
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -49,7 +48,8 @@ import { MiniblogComponent } from './miniblog/miniblog.component';
 import { AddBlogModalComponent } from './miniblog/add-blog-modal.component';
 import { GazonComponent } from './gazon/gazon.component';
 import { WaterTrackerComponent } from './water-tracker/water-tracker.component';
-import {CalcModule} from './calc/calc.module'
+import { CalcModule } from './calc/calc.module';
+import { G2048Module } from './g2048/g2048.module';  // Добавьте эту строку!
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -109,7 +109,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    G2048Module  // Добавьте эту строку!
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

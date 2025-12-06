@@ -363,3 +363,13 @@
     }
   }
 }
+
+// Стили для кнопок перевода
+ion-toolbar {
+  ion-buttons[slot="end"] {
+    ion-button {
+      min-width: 80px;
+      font-size: 0.8em;
+    }
+  }
+}

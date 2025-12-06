@@ -45,14 +45,27 @@
   "FrontPage": "Все компоненты",
   "Shopping": "Список покупок",
   "RSA": "Шифрование RSA",
-
   "Mood calendar": "Календарь настроения",
   "Mood Statistic": "Статистика настроения",
-
   "Water-tracker": "Водный баланс",
-
   "MPlayer": "МПлеер",
   "DragAndDrop": "Перетаскивание",
+  
+  "GAME_TITLE": "Игра 2048",
+  "NEW_GAME": "Новая игра",
+  "SCORE": "СЧЕТ",
+  "BEST_SCORE": "ЛУЧШИЙ",
+  "THEME_BUTTON": "Стиль",
+  "SIZE_BUTTON": "Размер поля",
+  "GAME_OVER": "Игра окончена!",
+  "YOU_WIN": "Вы выиграли!",
+  "TRY_AGAIN": "Попробовать снова",
+  "PLAY_AGAIN": "Играть снова",
+  "HOW_TO_PLAY": "Как играть",
+  "INSTRUCTIONS_MOVE": "Используй стрелки на клавиатуре для перемещения плиток.",
+  "INSTRUCTIONS_JOIN": "Соединяй одинаковые числа чтобы получить {{target}}!",
+  "FIELD_SIZE": "Размер поля",
+  
   "CRYPTO_MODULE": {
     "COMPONENT_TITLE": "Курсы криптовалют",
     "CRYPTO_TIME": "Обновлено",

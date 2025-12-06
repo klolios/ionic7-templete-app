@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Tile {
   value: number;
@@ -17,7 +18,7 @@ type GridSize = 3 | 4 | 5;
   templateUrl: './g2048.component.html',
   styleUrls: ['./g2048.component.scss']
 })
-export class G2048Component {
+export class G2048Component implements OnInit {
   grid: Tile[][] = [];
   score: number = 0;
   bestScore: number = 0;
@@ -25,14 +26,24 @@ export class G2048Component {
   won: boolean = false;
   currentTheme: GameTheme = 'classic';
   currentSize: GridSize = 4;
+  currentLang: string = 'ru';
+  langs: string[] = ['ru', 'en'];
   private targetValue: number = 2048;
   
-  constructor() {
+  constructor(private translate: TranslateService) {
+    this.currentLang = this.translate.currentLang || 'ru';
+  }
+
+  ngOnInit() {
     this.initializeGame();
   }
 
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
+    this.currentLang = lang;
+  }
+
   initializeGame() {
-    // Устанавливаем целевое значение в зависимости от размера
     this.targetValue = this.currentSize === 3 ? 512 : 
                       this.currentSize === 4 ? 2048 : 4096;
 
@@ -67,25 +78,6 @@ export class G2048Component {
     const currentIndex = sizes.indexOf(this.currentSize);
     this.currentSize = sizes[(currentIndex + 1) % sizes.length];
     this.initializeGame();
-  }
-
-  getThemeButtonText(): string {
-    const themeNames = {
-      'classic': 'Классика',
-      'dark': 'Тёмная',
-      'colorful': 'Цветная',
-      'minimal': 'Минимализм'
-    };
-    return `Стиль: ${themeNames[this.currentTheme]}`;
-  }
-
-  getSizeButtonText(): string {
-    const sizeNames = {
-      3: '3×3',
-      4: '4×4', 
-      5: '5×5'
-    };
-    return `Карта: ${sizeNames[this.currentSize]}`;
   }
 
   getTargetValue(): number {
@@ -300,7 +292,6 @@ export class G2048Component {
   }
 
   getTilePosition(tile: Tile): {x: number, y: number} {
-    // Используем фиксированные размеры для каждого типа поля
     let cellSize, gap;
     
     switch (this.currentSize) {
@@ -416,7 +407,6 @@ export class G2048Component {
     return tile.id;
   }
 
-  // Генератор массива для ngFor
   getGridArray(): number[] {
     return Array(this.currentSize).fill(0).map((x, i) => i);
   }

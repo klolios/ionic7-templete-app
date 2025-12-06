@@ -42,23 +42,35 @@
   "Marriage": "Marriage",
   "Курсы криптовалют": "Crypto rates",
   "Время": "Time",
-  "Цена": "Pice",
+  "Цена": "Price",
   "Загрузка": "Loading",
   "Shopping": "Shopping",
   "RSA": "RSA encription",
-
   "Recipes": "Recipes",
   "News": "News",
   "Save": "Save",
   "FrontPage": "All components",
-
   "Mood calendar": "Mood Calendar",
   "Mood Statistic": "Mood Statistic",
-
   "Water-tracker": "Water-tracker",
-
   "MPlayer": "MPlayer",
   "DragAndDrop": "Drag and drop",
+  
+  "GAME_TITLE": "2048 Game",
+  "NEW_GAME": "New Game",
+  "SCORE": "SCORE",
+  "BEST_SCORE": "BEST",
+  "THEME_BUTTON": "Theme",
+  "SIZE_BUTTON": "Field Size",
+  "GAME_OVER": "Game Over!",
+  "YOU_WIN": "You Win!",
+  "TRY_AGAIN": "Try Again",
+  "PLAY_AGAIN": "Play Again",
+  "HOW_TO_PLAY": "How to play",
+  "INSTRUCTIONS_MOVE": "Use arrow keys to move tiles.",
+  "INSTRUCTIONS_JOIN": "Join the same numbers to get {{target}}!",
+  "FIELD_SIZE": "Field size",
+  
   "CRYPTO_MODULE": {
     "COMPONENT_TITLE": "Сryptorates",
     "CRYPTO_TIME": "Updated",
@@ -113,7 +125,6 @@
   "calc": {
     "name": "Сalculator"
   },
-
   "CALCULATOR": {
     "TITLE": "Calculator",
     "BASIC": "Basic",
